@@ -7,6 +7,7 @@
 		"build": "ts-node ./scripts/build.ts"
 	},
 	"dependencies": {
+		"@tunnel/get-monorepo": "^1.0.0",
 		"@tunnel/mkcert": "^1.0.2",
 		"got": "^13.0.0"
 	},
