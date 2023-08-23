@@ -6,10 +6,10 @@ settings:
 
 dependencies:
   '@tunnel/mkcert':
-    specifier: 1.0.0
-    version: 1.0.0
+    specifier: ^1.0.2
+    version: 1.0.2
   got:
-    specifier: 13.0.0
+    specifier: ^13.0.0
     version: 13.0.0
 
 devDependencies:
@@ -17,10 +17,10 @@ devDependencies:
     specifier: ^9.6.12
     version: 9.6.12
   lionconfig:
-    specifier: 3.0.1
+    specifier: ^3.0.1
     version: 3.0.1(typescript@5.1.6)
   typescript:
-    specifier: 5.1.6
+    specifier: ^5.1.6
     version: 5.1.6
 
 packages:
@@ -1227,11 +1227,10 @@ packages:
     resolution: {integrity: sha512-yhxwIlFVSVcMym3O31HoMnRXpoenmpIxcj4Yoes2DUpe+xCJnA7ECQP1Vw889V0jTt/2nzvpLQ/UuMYCd3JPIg==}
     dev: true
 
-  /@tunnel/mkcert@1.0.0:
-    resolution: {integrity: sha512-GFNoC/BdeZIJQ2UNBGWNHPPwJiOnsmrCFRbYFEL5lloWoC19pRMh3YEycxRsUmRsGV0h1YG6UcFLAc9Q5hN0eA==}
+  /@tunnel/mkcert@1.0.2:
+    resolution: {integrity: sha512-XEMxMmTjRO4JJ95zJyguGqCpssSxPQCT+G69hBqb5m8ILIjrKRLNzf5aRV7tWq7AVW3n6I/5WVtHKYf893yY6Q==}
     dependencies:
       execa: 7.2.0
-      lion-utils: 0.2.2
       onetime: 6.0.0
       p-memoize: 7.1.1
       pathe: 1.1.1
@@ -2465,6 +2464,7 @@ packages:
   /detect-indent@7.0.1:
     resolution: {integrity: sha512-Mc7QhQ8s+cLrnUfU/Ji94vG/r8M26m8f++vyres4ZoojaRDpZ1eSIh/EpzLNwlWuvzSZ3UbDFspjFvTDXe6e/g==}
     engines: {node: '>=12.20'}
+    dev: true
 
   /detect-libc@2.0.2:
     resolution: {integrity: sha512-UX6sGumvvqSaXgdKGUsgZWqcUyIXZ/vZTrlRT/iobiKhGL0zL4d3osHj3uqllWJK+i+sixDS/3COVEOFbupFyw==}
@@ -2523,6 +2523,7 @@ packages:
     engines: {node: '>=16'}
     dependencies:
       type-fest: 3.13.1
+    dev: true
 
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
@@ -3438,6 +3439,7 @@ packages:
     dependencies:
       locate-path: 7.2.0
       path-exists: 5.0.0
+    dev: true
 
   /flat-cache@3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
@@ -4566,14 +4568,6 @@ packages:
       pkg-up: 4.0.0
     dev: true
 
-  /lion-utils@0.2.2:
-    resolution: {integrity: sha512-6n3tglrDw6o16iSAwZfA61XYSP81TlvfTMUuS2Cu2BIeJquDrdBCJIOl1GlCr45Cafd+GLkiIvUJIEkwKrxX7Q==}
-    dependencies:
-      detect-indent: 7.0.1
-      dot-prop: 8.0.2
-      pkg-up: 4.0.0
-    dev: false
-
   /lionconfig@3.0.1(typescript@5.1.6):
     resolution: {integrity: sha512-ls9H4ye0kMBcGaxL1hrOAYO20vxzHvz5kskoPzI3PC7SiU44AdDyaFFHYcmx+qIVe1jJVemi+0jcY0vDRMtWEw==}
     hasBin: true
@@ -4784,6 +4778,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       p-locate: 6.0.0
+    dev: true
 
   /lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
@@ -5551,6 +5546,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       yocto-queue: 1.0.0
+    dev: true
 
   /p-locate@3.0.0:
     resolution: {integrity: sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==}
@@ -5578,6 +5574,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       p-limit: 4.0.0
+    dev: true
 
   /p-map@2.1.0:
     resolution: {integrity: sha512-y3b8Kpd8OAN444hxfBbFfj1FY/RjtTd8tzYwhUqNYXx0fXx2iX4maP4Qr6qhIKbQXI02wTLAda4fYUbDagTUFw==}
@@ -5690,6 +5687,7 @@ packages:
   /path-exists@5.0.0:
     resolution: {integrity: sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -5781,6 +5779,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       find-up: 6.3.0
+    dev: true
 
   /plimit-lit@1.5.0:
     resolution: {integrity: sha512-Eb/MqCb1Iv/ok4m1FqIXqvUKPISufcjZ605hl3KM/n8GaX8zfhtgdLwZU3vKjuHGh2O9Rjog/bHTq8ofIShdng==}
@@ -7331,3 +7330,4 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
