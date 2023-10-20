@@ -2,7 +2,8 @@ import https from "node:https";
 
 import { getMkcertCerts } from "@tunnel/mkcert";
 import { got as _got } from "got";
-import { getMonorepoDirpath } from "@tunnel/get-monorepo";
+import { getMonorepoDirpath } from "get-monorepo-root";
+import which from "which";
 
 import { gotErrorHook } from "./utils/error.js";
 
@@ -18,10 +19,8 @@ export const got = _got.extend({
           throw new Error("Could not find monorepo dirpath");
         }
 
-        const cliHelpersString = "@t/cli-helpers";
-        const { cli } = await import(cliHelpersString);
         const { ca, cert, key } = await getMkcertCerts({
-          mkcertBin: await cli.mkcert.getExecutablePath(),
+          mkcertBin: await which("mkcert"),
           monorepoDirpath,
         });
         options.agent.https = new https.Agent({

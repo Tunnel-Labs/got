@@ -5,20 +5,29 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@tunnel/get-monorepo':
-    specifier: ^1.0.0
-    version: 1.0.0
   '@tunnel/mkcert':
     specifier: ^1.0.2
     version: 1.0.2
+  get-monorepo-root:
+    specifier: ^1.2.0
+    version: 1.2.0
   got:
     specifier: ^13.0.0
     version: 13.0.0
+  which:
+    specifier: ^4.0.0
+    version: 4.0.0
 
 devDependencies:
   '@types/got':
     specifier: ^9.6.12
     version: 9.6.12
+  '@types/mkcert':
+    specifier: ^1.2.1
+    version: 1.2.1
+  '@types/which':
+    specifier: ^3.0.1
+    version: 3.0.1
   lionconfig:
     specifier: ^3.0.1
     version: 3.0.1(typescript@5.1.6)
@@ -1230,13 +1239,6 @@ packages:
     resolution: {integrity: sha512-yhxwIlFVSVcMym3O31HoMnRXpoenmpIxcj4Yoes2DUpe+xCJnA7ECQP1Vw889V0jTt/2nzvpLQ/UuMYCd3JPIg==}
     dev: true
 
-  /@tunnel/get-monorepo@1.0.0:
-    resolution: {integrity: sha512-uxvpiEmcIP8GdzIk9p9aozYUIJ+wQe3Rko+6W7uqyfnetoGjJznax0SJuKJS5+Hkm4x6NJL/nx/5CJjXBu56gg==}
-    dependencies:
-      map-obj: 5.0.2
-      pkg-up: 4.0.0
-    dev: false
-
   /@tunnel/mkcert@1.0.2:
     resolution: {integrity: sha512-XEMxMmTjRO4JJ95zJyguGqCpssSxPQCT+G69hBqb5m8ILIjrKRLNzf5aRV7tWq7AVW3n6I/5WVtHKYf893yY6Q==}
     dependencies:
@@ -1301,6 +1303,10 @@ packages:
     resolution: {integrity: sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==}
     dev: true
 
+  /@types/mkcert@1.2.1:
+    resolution: {integrity: sha512-i8yeygG2XxUUKxGBGcLl8peuJ6FJt55ILgdEgtKdLC5sEH4Yb0H/CXpVsajTQfy8hd6bA3bfQOXArKVjz21Oyw==}
+    dev: true
+
   /@types/node@20.4.7:
     resolution: {integrity: sha512-bUBrPjEry2QUTsnuEjzjbS7voGWCc30W0qzgMf90GPeDGFRakvrz47ju+oqDAKCXLUCe39u57/ORMl/O/04/9g==}
     dev: true
@@ -1358,6 +1364,10 @@ packages:
 
   /@types/unist@2.0.7:
     resolution: {integrity: sha512-cputDpIbFgLUaGQn6Vqg3/YsJwxUwHLO13v3i5ouxT4lat0khip9AEWxtERujXV9wxIB1EyF97BSJFt6vpdI8g==}
+    dev: true
+
+  /@types/which@3.0.1:
+    resolution: {integrity: sha512-OJWjr4k8gS1HXuOnCmQbBrQez+xqt/zqfp5PhgbKtsmEFEuojAg23arr+TiTZZ1TORdUF9RKXb/WKEpT1dwgSg==}
     dev: true
 
   /@types/yauzl@2.10.0:
@@ -3449,6 +3459,7 @@ packages:
     dependencies:
       locate-path: 7.2.0
       path-exists: 5.0.0
+    dev: true
 
   /flat-cache@3.0.4:
     resolution: {integrity: sha512-dm9s5Pw7Jc0GvMYbshN6zchCA9RgQlzzEZX3vylR9IqFfS8XciblUXOKfW6SiuJ0e13eDYZoZV5wdrev7P3Nwg==}
@@ -3548,6 +3559,12 @@ packages:
       has-proto: 1.0.1
       has-symbols: 1.0.3
     dev: true
+
+  /get-monorepo-root@1.2.0:
+    resolution: {integrity: sha512-Z25q2/NmtYXneeMfCFZT7+ekp+yWQJOCQe3ZsrhuIEKjLinsNbC6DjYLMdQ3TlQfoJ3l09XIF34hn08j1U+C1g==}
+    dependencies:
+      pathe: 1.1.1
+    dev: false
 
   /get-set-props@0.1.0:
     resolution: {integrity: sha512-7oKuKzAGKj0ag+eWZwcGw2fjiZ78tXnXQoBgY0aU7ZOxTu4bB7hSuQSDgtKy978EDH062P5FmD2EWiDpQS9K9Q==}
@@ -4392,6 +4409,11 @@ packages:
   /isexe@2.0.0:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
 
+  /isexe@3.1.1:
+    resolution: {integrity: sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==}
+    engines: {node: '>=16'}
+    dev: false
+
   /issue-regex@4.1.0:
     resolution: {integrity: sha512-X3HBmm7+Th+l4/kMtqwcHHgELD0Lfl0Ina6S3+grr+mKmTxsrM84NAO1UuRPIxIbGLIl3TCEu45S1kdu21HYbQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
@@ -4787,6 +4809,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       p-locate: 6.0.0
+    dev: true
 
   /lodash-es@4.17.21:
     resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
@@ -4942,11 +4965,6 @@ packages:
     resolution: {integrity: sha512-hdN1wVrZbb29eBGiGjJbeP8JbKjq1urkHJ/LIP/NY48MZ1QVXUsQBV1G1zvYFHn1XE06cwjBsOI2K3Ulnj1YXQ==}
     engines: {node: '>=8'}
     dev: true
-
-  /map-obj@5.0.2:
-    resolution: {integrity: sha512-K6K2NgKnTXimT3779/4KxSvobxOtMmx1LBZ3NwRxT/MDIR3Br/fQ4Q+WCX5QxjyUR8zg5+RV9Tbf2c5pAWTD2A==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: false
 
   /markdown-it@13.0.1:
     resolution: {integrity: sha512-lTlxriVoy2criHP0JKRhO2VDG9c2ypWCsT237eDiLqi09rmbKoUetyGHq2uOIRoRS//kfoJckS0eUzzkDR+k2Q==}
@@ -5559,6 +5577,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       yocto-queue: 1.0.0
+    dev: true
 
   /p-locate@3.0.0:
     resolution: {integrity: sha512-x+12w/To+4GFfgJhBEpiDcLozRJGegY+Ei7/z0tSLkMmxGZNybVMSfWj9aJn8Z5Fc7dBUNJOOVgPv2H7IwulSQ==}
@@ -5586,6 +5605,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       p-limit: 4.0.0
+    dev: true
 
   /p-map@2.1.0:
     resolution: {integrity: sha512-y3b8Kpd8OAN444hxfBbFfj1FY/RjtTd8tzYwhUqNYXx0fXx2iX4maP4Qr6qhIKbQXI02wTLAda4fYUbDagTUFw==}
@@ -5698,6 +5718,7 @@ packages:
   /path-exists@5.0.0:
     resolution: {integrity: sha512-RjhtfwJOxzcFmNOi6ltcbcu4Iu+FL3zEj83dk4kAS+fVpTxXLO1b38RvJgT/0QwvV/L3aY9TAnyv0EOqW4GoMQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}
@@ -5789,6 +5810,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       find-up: 6.3.0
+    dev: true
 
   /plimit-lit@1.5.0:
     resolution: {integrity: sha512-Eb/MqCb1Iv/ok4m1FqIXqvUKPISufcjZ605hl3KM/n8GaX8zfhtgdLwZU3vKjuHGh2O9Rjog/bHTq8ofIShdng==}
@@ -7134,6 +7156,14 @@ packages:
       isexe: 2.0.0
     dev: true
 
+  /which@4.0.0:
+    resolution: {integrity: sha512-GlaYyEb07DPxYCKhKzplCWBJtvxZcZMrL+4UkrTSJHHPyZU4mYYTv3qaOe77H7EODLSSopAUFAc6W8U4yqvscg==}
+    engines: {node: ^16.13.0 || >=18.0.0}
+    hasBin: true
+    dependencies:
+      isexe: 3.1.1
+    dev: false
+
   /widest-line@3.1.0:
     resolution: {integrity: sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==}
     engines: {node: '>=8'}
@@ -7341,3 +7371,4 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
+    dev: true
