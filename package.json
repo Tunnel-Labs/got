@@ -1,5 +1,6 @@
 {
 	"name": "@tunnel/got",
+	"root": true,
 	"version": "1.0.2",
 	"type": "module",
 	"exports": "./src/index.ts",
@@ -7,17 +8,17 @@
 		"build": "tun ./scripts/build.ts"
 	},
 	"dependencies": {
-		"@tunnel/mkcert": "^1.0.2",
-		"get-monorepo-root": "^1.2.0",
-		"got": "^13.0.0",
+		"@tunnel/mkcert": "^1.0.3",
+		"get-monorepo-root": "^1.2.1",
+		"got": "^14.0.0",
 		"which": "^4.0.0"
 	},
 	"devDependencies": {
+		"@tunnel/tun": "^0.3.6",
 		"@types/got": "^9.6.12",
-		"@types/mkcert": "^1.2.1",
-		"@tunnel/tun": "^0.1.3",
-		"@types/which": "^3.0.1",
-		"typescript": "^5.1.6",
-		"lionconfig": "^3.0.1"
+		"@types/mkcert": "^1.2.2",
+		"@types/which": "^3.0.3",
+		"lionconfig": "^3.1.2",
+		"typescript": "^5.3.3"
 	}
 }
